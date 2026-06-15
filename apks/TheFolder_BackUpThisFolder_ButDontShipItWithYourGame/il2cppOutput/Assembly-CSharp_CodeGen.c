@@ -19,6 +19,11 @@ extern void GameManager_GameOver_mF1BD400E7F84A0B533A58E80ADA7CCB89C964625 (void
 extern void GameManager_RestartGame_m03813C863F1F1ABB9DC30BC371E2F088D7B01F75 (void);
 extern void GameManager_SetState_m3A52E552AC66245D1A17C5CB023EE4FF121D19A0 (void);
 extern void GameManager_SpawnNewPaper_mF6663651C1B09C2462FA7E7C2621DFFA98B38386 (void);
+extern void GameManager_PlayPlaySound_mAEE83E13A23A0BF65E13EC3516AA9800EA182EC7 (void);
+extern void GameManager_PlaySpawnSound_m5C5D11F70C58C396B1336E2448AF88CE41895BF7 (void);
+extern void GameManager_PlayTakeSound_m2BCA5717BACA3172C771174D1E003EDCBE9F4D67 (void);
+extern void GameManager_PlayPutSound_m33DF5544F1E7BE7C2F89EB367EBF1B1519E80035 (void);
+extern void GameManager_PlayLossSound_m12EF58EE73D1CBA3C8979A1B35439977457EC315 (void);
 extern void GameManager_Update_m7F29D8E933B8D21D2E67507979C0F12ACF87BB41 (void);
 extern void GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368 (void);
 extern void Paper_Start_m72076C7747EDD6499A81E0F9FBB485E43A5CD84F (void);
@@ -300,7 +305,7 @@ extern void U3CWarpTextU3Ed__8_MoveNext_mCE7A826C5E4854C2C509C77BD18F5A9B6D691B0
 extern void U3CWarpTextU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD80368E9B7E259311C03E406B75161ED6F7618E3 (void);
 extern void U3CWarpTextU3Ed__8_System_Collections_IEnumerator_Reset_m07746C332D2D8CE5DEA59873C26F2FAD4B369B42 (void);
 extern void U3CWarpTextU3Ed__8_System_Collections_IEnumerator_get_Current_m71D7F84D9DEF63BEC6B44866515DDCF35B142A19 (void);
-static Il2CppMethodPointer s_methodPointers[293] = 
+static Il2CppMethodPointer s_methodPointers[298] = 
 {
 	Folder_Awake_m52AC6F51521FA5C0F9A56382D1A789319BAC955B,
 	Folder_SetHover_m4A7846A16ACC751841CD7BCA59EC6C4E6673713D,
@@ -314,6 +319,11 @@ static Il2CppMethodPointer s_methodPointers[293] =
 	GameManager_RestartGame_m03813C863F1F1ABB9DC30BC371E2F088D7B01F75,
 	GameManager_SetState_m3A52E552AC66245D1A17C5CB023EE4FF121D19A0,
 	GameManager_SpawnNewPaper_mF6663651C1B09C2462FA7E7C2621DFFA98B38386,
+	GameManager_PlayPlaySound_mAEE83E13A23A0BF65E13EC3516AA9800EA182EC7,
+	GameManager_PlaySpawnSound_m5C5D11F70C58C396B1336E2448AF88CE41895BF7,
+	GameManager_PlayTakeSound_m2BCA5717BACA3172C771174D1E003EDCBE9F4D67,
+	GameManager_PlayPutSound_m33DF5544F1E7BE7C2F89EB367EBF1B1519E80035,
+	GameManager_PlayLossSound_m12EF58EE73D1CBA3C8979A1B35439977457EC315,
 	GameManager_Update_m7F29D8E933B8D21D2E67507979C0F12ACF87BB41,
 	GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368,
 	Paper_Start_m72076C7747EDD6499A81E0F9FBB485E43A5CD84F,
@@ -596,7 +606,7 @@ static Il2CppMethodPointer s_methodPointers[293] =
 	U3CWarpTextU3Ed__8_System_Collections_IEnumerator_Reset_m07746C332D2D8CE5DEA59873C26F2FAD4B369B42,
 	U3CWarpTextU3Ed__8_System_Collections_IEnumerator_get_Current_m71D7F84D9DEF63BEC6B44866515DDCF35B142A19,
 };
-static const int32_t s_InvokerIndices[293] = 
+static const int32_t s_InvokerIndices[298] = 
 {
 	16312,
 	12182,
@@ -609,6 +619,11 @@ static const int32_t s_InvokerIndices[293] =
 	16312,
 	16312,
 	12323,
+	16312,
+	16312,
+	16312,
+	16312,
+	16312,
 	16312,
 	16312,
 	16312,
@@ -639,7 +654,7 @@ static const int32_t s_InvokerIndices[293] =
 	16062,
 	16312,
 	16062,
-	28174,
+	28175,
 	16312,
 	2514,
 	16312,
@@ -759,7 +774,7 @@ static const int32_t s_InvokerIndices[293] =
 	16062,
 	16062,
 	16312,
-	28147,
+	28148,
 	12323,
 	16312,
 	15852,
@@ -896,7 +911,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	293,
+	298,
 	s_methodPointers,
 	0,
 	NULL,

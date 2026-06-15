@@ -21207,7 +21207,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 97206
+// Method Definition Index: 97211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AppleReceiptParser_ArrayEquals_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_m3D5A83C508B9F5032DED3141E25FA6F0AD5504DF_gshared (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_a, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_b, const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);
@@ -21281,7 +21281,7 @@ IL_0031:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 97206
+// Method Definition Index: 97211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AppleReceiptParser_ArrayEquals_TisIl2CppFullySharedGenericAny_mF6F4BAC5D1531579D3B6774DC628062C7C80054A_gshared (__Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___0_a, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___1_b, const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);

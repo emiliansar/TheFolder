@@ -14,6 +14,15 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioSource audioSource;
+
+    public AudioClip playSound;
+    public AudioClip spawnSound;
+    public AudioClip takeSound;
+    public AudioClip putSound;
+    public AudioClip lossSound;
+
     public GameState state;
     public GameObject mainMenu;
     public GameObject gameUI;
@@ -50,6 +59,8 @@ public class GameManager : MonoBehaviour
         spawnTimer = 0f;
 
         SetState(GameState.Playing);
+
+        PlayPlaySound();
 
         UpdateUI();
     }
@@ -90,6 +101,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("GAME OVER");
         SetState(GameState.RestartMenu);
+
+        PlayLossSound();
 
         Time.timeScale = 0f;
     }
@@ -201,6 +214,33 @@ public class GameManager : MonoBehaviour
         paper.baseOrder = paper.sr.sortingOrder;
 
         randomPoint.isOccupied = true;
+
+        PlaySpawnSound();
+    }
+
+    public void PlayPlaySound()
+    {
+        audioSource.PlayOneShot(playSound);
+    }
+
+    public void PlaySpawnSound()
+    {
+        audioSource.PlayOneShot(spawnSound);
+    }
+
+    public void PlayTakeSound()
+    {
+        audioSource.PlayOneShot(takeSound);
+    }
+
+    public void PlayPutSound()
+    {
+        audioSource.PlayOneShot(putSound);
+    }
+
+    public void PlayLossSound()
+    {
+        audioSource.PlayOneShot(lossSound);
     }
 
     void Update()

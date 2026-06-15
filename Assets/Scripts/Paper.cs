@@ -50,6 +50,8 @@ public class Paper : MonoBehaviour
         offset = transform.position - new Vector3(mousePos.x, mousePos.y, 0);
 
         sr.sortingOrder = 1000;
+
+        gameManager.PlayTakeSound();
     }
 
     void OnMouseDrag()
@@ -124,6 +126,7 @@ public class Paper : MonoBehaviour
             if (currentHoveredFolder.color == color)
             {
                 Debug.Log("Correct drop");
+                gameManager.PlayPutSound();
                 gameManager.AddProgress();
 
                 currentSpawnPoint.isOccupied = false;
